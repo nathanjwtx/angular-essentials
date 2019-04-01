@@ -13,7 +13,9 @@ import { Component, Input } from '@angular/core';
 })
 
 export class UserComponent {
-  @Input() name = 'Nathan';
+  // property
+  @Input() name;
+  // event binding
   onUserInput(event) {
     this.name = event.target.value;
   }
