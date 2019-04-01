@@ -1,0 +1,13 @@
+<h2>Your Dashboard!</h2>
+<hr>
+<p>Hi {{ name }}!</p>
+<p>Current status of dashboard is: {{ loadState }}</p>
+<div>
+    <button (click)="onSwitchState()">Switch State</button>
+</div>
+<!-- or -->
+<!-- <p [textContent]="loadState"></p> -->
+<hr>
+<div>
+    <input type="text" [(ngModel)]="loadState">
+</div>
