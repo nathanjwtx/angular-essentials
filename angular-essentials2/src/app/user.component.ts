@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /* alternative property binding syntax value="{{ name }}"
 <input type="text" (input)="onUserInput($event)" [value]="name">
@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
 })
 
 export class UserComponent {
-  name = 'Nathan';
+  @Input() name = 'Nathan';
   onUserInput(event) {
     this.name = event.target.value;
   }
