@@ -1,3 +1,4 @@
 .vscode/*
 .vs/*
 angular-essentials2/node_modules
+*\node_modules
