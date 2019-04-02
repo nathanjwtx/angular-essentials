@@ -1,0 +1,8 @@
+<p>
+  cart-component works!
+</p>
+<div>
+  <button (click)="onButtonClick($event)">Add Item To Cart</button>
+  <!-- remember to import FormsModule in app.module to use ngModel -->
+  <input type="text" [(ngModel)]="newValue">
+</div>
