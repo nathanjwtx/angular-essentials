@@ -1,4 +1,19 @@
 <input type="text" [(ngModel)]="newItem">
+<!-- [nglass] is non strucutral directive that also uses property binding -->
 <button
   (click)="onAddItem()"
-  class="btn btn-primary">>Add Item</button>
+  class="btn btn-primary" [ngClass]="{'btn-primary': newItem !== '', 'btn-default': newItem === ''}">Add Item</button>
+
+<hr>
+<ul class="list-group">
+  <!-- *ngFor is a structural directive -->
+  <!-- index is a reserved keyword and must be used -->
+  
+  <!-- [ngStyle]="{backgroundColor: i % 2 === 0 ? 'yellow' : 'blue'}">{{ item }} -->
+  <li 
+    class="list-group-item" 
+    *ngFor="let item of items; let i = index"
+    
+    [ngStyle]="{'background-color': i % 2 === 0 ? 'yellow' : 'blue'}">{{ item }}
+  </li>
+</ul>
