@@ -1,0 +1,18 @@
+<!-- local reference #f (or whatever name) to gain access to elements within the template
+ngForm is a reserved keyword which binds the JS object created by angular to give us access to the
+native HTML form object -->
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="characterName">Character Name</label>
+    <input type="text" id="name" name="name" class="form-control" ngModel>
+  </div>
+  <div class="form-group">
+    <label for="side">Choose Side</label>
+    <select name="side" id="side" class="form-control">
+      <option *ngFor="let option of availableSides" [value]="option.value">
+        {{ option.display }}
+      </option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit">Create characer</button>
+</form>
