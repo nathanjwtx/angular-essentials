@@ -8,15 +8,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ListComponent implements OnInit {
 
   @Input() characters: any;
-  @Output() sideAssigned = new EventEmitter<{name: string, side: string}>();
+  // not needed due to service
+  // @Output() sideAssigned = new EventEmitter<{name: string, side: string}>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSideAssigned(charInfo) {
-    this.sideAssigned.emit(charInfo);
-  }
+  // not needed
+  // onSideAssigned(charInfo) {
+  //   this.sideAssigned.emit(charInfo);
+  // }
 
 }

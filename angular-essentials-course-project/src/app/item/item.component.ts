@@ -9,7 +9,8 @@ import { StarWarsService } from '../star-wars.service';
 export class ItemComponent implements OnInit {
 
   @Input() character;
-  @Output() sideAssigned = new EventEmitter<{name: string, side: string}>();
+  // not needed as we are injecting the data via the service
+  // @Output() sideAssigned = new EventEmitter<{name: string, side: string}>();
 
   swService: StarWarsService;
 
