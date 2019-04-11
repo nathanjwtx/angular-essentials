@@ -1,4 +1,5 @@
-<div>
+<!-- old method prior to using routing on tabs -->
+<!-- <div>
   <ul class="nav nav-tabs">
     <li role="presentation" [ngClass]="{active: chosenList === 'all'}">
       <a (click)="onChoose('all')" style="cursor: pointer">All</a>
@@ -11,4 +12,20 @@
     </li>
   </ul>
   <app-list [characters]="getCharacters()"></app-list>
-</div>
+</div> -->
+
+
+<div>
+    <ul class="nav nav-tabs">
+      <li role="presentation" routerLinkActive="active">
+        <a [routerLink]="['/characters/all']">All</a>
+      </li>
+      <li role="presentation" routerLinkActive="active">
+        <a [routerLink]="['/characters/dark']">Dark</a>
+      </li>
+      <li role="presentation" routerLinkActive="active">
+        <a [routerLink]="['/characters/light']">Light</a>
+      </li>
+    </ul>
+    <router-outlet></router-outlet> 
+  </div>
