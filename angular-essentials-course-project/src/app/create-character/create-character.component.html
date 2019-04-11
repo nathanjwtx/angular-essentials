@@ -18,7 +18,7 @@ native HTML form object -->
   </div>
   <div class="form-group">
     <label for="side">Choose Side</label>
-    <select name="side" id="side" class="form-control" ngModel required>
+    <select name="side" id="side" class="form-control" ngModel>
       <option *ngFor="let option of availableSides" [value]="option.value">
         {{ option.display }}
       </option>
