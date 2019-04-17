@@ -12,16 +12,8 @@ import { LogService } from './log.service';
 import { CreateCharacterComponent } from './create-character/create-character.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  { path: 'characters', component: TabsComponent, children: [
-    { path: '', redirectTo: 'all', pathMatch: 'full'},
-    { path: ':side', component: ListComponent}
-  ] },
-  { path: 'new-character', component: CreateCharacterComponent},
-  // catch all route must go last
-  { path: '**', redirectTo: '/characters'}
-];
 
 @NgModule({
   declarations: [
@@ -35,8 +27,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes),
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [StarWarsService, LogService],
   bootstrap: [AppComponent]
